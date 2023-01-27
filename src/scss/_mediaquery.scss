@@ -1,0 +1,22 @@
+@media (max-width: 425px) {
+  .advice {
+    padding: 47px 40px;
+  }
+
+  .advice-number {
+    font-size: 12px;
+  }
+
+  .advice-text {
+    font-size: 23px;
+  }
+
+  .pattern {
+    display: none;
+  }
+
+  .pattern-mobile {
+    display: initial;
+    padding-top: 30px;
+  }
+}

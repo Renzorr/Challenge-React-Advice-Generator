@@ -1,0 +1,63 @@
+@use "./variables" as v;
+
+.advice {
+  margin: 204px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: v.$Dark-Grayish-Blue;
+  max-width: 543px;
+  min-height: 330px;
+  border-radius: 20px;
+  padding: 47px 40px;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.301);
+}
+
+.advice-number {
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: v.$Neon-Green;
+  text-transform: uppercase;
+}
+
+.advice-text {
+  padding-top: 26px;
+  font-size: 27.5px;
+  color: v.$Light-Cyan;
+}
+
+.pattern,
+.pattern-mobile {
+  padding-top: 40px;
+}
+
+.pattern-mobile {
+  display: none;
+}
+
+.advice-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  background-color: v.$Neon-Green;
+  border-radius: 50%;
+  bottom: -10%;
+  transition: 0.4s;
+
+  img {
+    transition: 0.4s;
+  }
+
+  &:hover {
+    box-shadow: 0 0 25px v.$Neon-Green;
+
+    img {
+      transform: rotate(360deg);
+    }
+  }
+}
