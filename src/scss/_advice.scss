@@ -1,30 +1,34 @@
 @use "./variables" as v;
 
+h1 {
+  width: 0;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+  opacity: 0;
+}
+
 .advice {
   margin: 204px auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   text-align: center;
   background-color: v.$Dark-Grayish-Blue;
   max-width: 543px;
-  min-height: 330px;
   border-radius: 20px;
-  padding: 47px 40px;
+  padding: 47px 40px 67px;
   position: relative;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.301);
 }
 
 .advice-number {
-  font-size: 13px;
-  letter-spacing: 4px;
+  font-size: 12.9px;
+  letter-spacing: 4.1px;
   color: v.$Neon-Green;
   text-transform: uppercase;
 }
 
 .advice-text {
-  padding-top: 26px;
-  font-size: 27.5px;
+  padding-top: 25px;
+  font-size: 27.4px;
   color: v.$Light-Cyan;
 }
 
@@ -39,14 +43,15 @@
 
 .advice-btn {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10%;
+  display: grid;
+  place-content: center;
   width: 65px;
   height: 65px;
   background-color: v.$Neon-Green;
   border-radius: 50%;
-  bottom: -10%;
   transition: 0.4s;
 
   img {

@@ -1,0 +1,59 @@
+@use "./variables" as v;
+
+.loader.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    margin: 15px auto;
+    position: relative;
+    background: v.$black;
+    box-shadow: -24px 0 v.$black, 24px 0 v.$black;
+    box-sizing: border-box;
+    animation: shadowPulse 2s linear infinite;
+
+    @keyframes shadowPulse {
+      33% {
+        background: v.$black;
+        box-shadow: -24px 0 v.$Neon-Green, 24px 0 v.$black;
+      }
+      66% {
+        background: v.$Neon-Green;
+        box-shadow: -24px 0 v.$black, 24px 0 v.$black;
+      }
+      100% {
+        background: v.$black;
+        box-shadow: -24px 0 v.$black, 24px 0 v.$Neon-Green;
+      }
+    }
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.advice-content.loading {
+  opacity: 0;
+}
+
+.advice-btn.loading {
+  display: none;
+}
